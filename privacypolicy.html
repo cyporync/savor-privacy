@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savor &mdash; Privacy Policy</title>
+</head>
+<body>
+  <h1>Savor Privacy Policy</h1>
+  <p>Last updated: 11/29/2025</p>
+
+  <p><strong>Contact:</strong> Claire Cyporyn &mdash; <a href="mailto:cyporync@msu.edu">cyporync@msu.edu</a></p>
+
+  <h2>1. Summary</h2>
+  <p>Savor is a mobile cookbook app that lets users save recipes (name, description, ingredients, materials) and optionally add a photo of the finished dish. This policy explains what data we collect, why we collect it, how we store it, and your choices.</p>
+
+  <h2>2. Data we collect</h2>
+  <ul>
+    <li><strong>Account data:</strong> username and hashed password (stored on our server) &mdash; used for authentication.</li>
+    <li><strong>Recipe metadata:</strong> recipe name, description, ingredients, materials &mdash; stored in our MySQL database.</li>
+    <li><strong>Recipe photos:</strong> if you add a photo, the app sends an encoded image to our PHP endpoint. The server decodes and saves the image as a .jpg file in the server uploads folder and stores the image URL in the database.</li>
+    <li><strong>Local cache:</strong> minimal user info (username, user id) and a cached copy of recipe metadata may be stored on the device using SharedPreferences to speed up UI and provide limited offline access. Image files are not persisted in the app beyond standard media URIs and view cache unless explicitly saved by the user.</li>
+    <li><strong>Device & permission info:</strong> camera permission is requested only when you use the “Take Photo” feature. We do not collect location, microphone, or any other sensor information.</li>
+  </ul>
+
+  <h2>3. How we use the data</h2>
+  <ul>
+    <li>Authenticate and authorize access to a user’s recipes.</li>
+    <li>Store and serve recipes and associated images so you can view and edit them across devices.</li>
+    <li>Cache small amounts of data locally to improve performance and provide limited offline access.</li>
+  </ul>
+
+  <h2>4. How we share and with whom</h2>
+  <p>We do not sell or share your personal data with third parties for marketing. Recipes and images are stored on our server hosted by Michigan State University College of Engineering DECS (Division of Engineering Computing Services).</p>
+
+  <h2>5. Third-party services and libraries</h2>
+  <p>We use the following third-party libraries in the app: Retrofit, CameraX (camera preview), Gson (JSON parsing), and Glide (image loading). These libraries may transmit or log request/response data for debugging. We do not use analytics or advertising SDKs in the current build.</p>
+
+  <h2>6. Storage, retention, and deletion</h2>
+  <ul>
+    <li>Recipe metadata and image URLs are stored permanently on the server until you delete the recipe.</li>
+    <li>When you delete a recipe in the app, the server removes the database record and attempts to delete the corresponding image file from the server uploads folder.</li>
+    <li>If you want your data removed entirely, contact us at <a href="mailto:cyporync@msu.edu">cyporync@msu.edu</a> with your username; we will delete your account and associated recipes on request.</li>
+  </ul>
+
+  <h2>7. Security</h2>
+  <p>Passwords are hashed on the server. Communication between the app and server uses HTTPS. Access to the server is limited to the team. While we take reasonable precautions to protect data, no system is completely secure; by using the app you accept this small residual risk.</p>
+
+  <h2>8. Permissions</h2>
+  <p>The app requests only the permissions necessary for functionality: camera permission when using the “Take Photo” feature and network access. Each permission is requested at runtime and explained in the UI before being requested.</p>
+
+  <h2>9. Children</h2>
+  <p>The app is not intended for children under 13. We do not knowingly collect data from children; if you believe a child’s data is present, contact us so we can remove it.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>We may update this policy to reflect changes in features or legal requirements. We will post the revised policy at this URL and update the “Last updated” date.</p>
+
+  <h2>11. Contact</h2>
+  <p>If you have privacy questions or want your data deleted, contact: <a href="mailto:cyporync@msu.edu">cyporync@msu.edu</a>.</p>
+</body>
+</html>
